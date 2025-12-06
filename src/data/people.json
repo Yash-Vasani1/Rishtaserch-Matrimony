@@ -1,0 +1,102 @@
+[
+  {
+    "id": 1,
+    "name": "Aarav Patel",
+    "age": 29,
+    "location": "Ahmedabad, Gujarat",
+    "occupation": "Software Engineer",
+    "about": "Friendly, family-oriented, loves travel and cooking.",
+    "image": "https://i.pravatar.cc/400?img=12",
+    "details": "Aarav is a software engineer with 6 years experience. He loves trekking and photography."
+  },
+  {
+    "id": 2,
+    "name": "Saanvi Shah",
+    "age": 26,
+    "location": "Surat, Gujarat",
+    "occupation": "Graphic Designer",
+    "about": "Creative, compassionate, enjoys painting and yoga.",
+    "image": "https://i.pravatar.cc/400?img=47",
+    "details": "Saanvi is a creative designer who enjoys storytelling and yoga."
+  },
+  {
+    "id": 3,
+    "name": "Rohan Mehta",
+    "age": 31,
+    "location": "Vadodara, Gujarat",
+    "occupation": "Entrepreneur",
+    "about": "Ambitious, fitness enthusiast, enjoys reading.",
+    "image": "https://i.pravatar.cc/400?img=5",
+    "details": "Rohan runs a startup. Family values matter to him greatly."
+  },
+  {
+    "id": 4,
+    "name": "Meera Joshi",
+    "age": 27,
+    "location": "Mumbai, Maharashtra",
+    "occupation": "Doctor",
+    "about": "Caring, calm, loves helping people.",
+    "image": "https://i.pravatar.cc/400?img=32",
+    "details": "Meera is a pediatric doctor who enjoys meditation and classical music."
+  },
+  {
+    "id": 5,
+    "name": "Dev Singhania",
+    "age": 30,
+    "location": "Pune, Maharashtra",
+    "occupation": "Architect",
+    "about": "Creative thinker, loves nature and art.",
+    "image": "https://i.pravatar.cc/400?img=22",
+    "details": "Dev designs eco-friendly buildings and loves long bike trips."
+  },
+  {
+    "id": 6,
+    "name": "Isha Kapoor",
+    "age": 25,
+    "location": "Delhi",
+    "occupation": "Teacher",
+    "about": "Simple, traditional and kind-hearted.",
+    "image": "https://i.pravatar.cc/400?img=56",
+    "details": "Isha teaches English literature and enjoys writing poetry."
+  },
+  {
+    "id": 7,
+    "name": "Kunal Desai",
+    "age": 33,
+    "location": "Rajkot, Gujarat",
+    "occupation": "Businessman",
+    "about": "Optimistic, practical, loves traveling.",
+    "image": "https://i.pravatar.cc/400?img=3",
+    "details": "Kunal runs a family textile business and loves exploring cultures."
+  },
+  {
+    "id": 8,
+    "name": "Priya Nair",
+    "age": 28,
+    "location": "Kochi, Kerala",
+    "occupation": "Software Developer",
+    "about": "Friendly, spiritual, family-loving.",
+    "image": "https://i.pravatar.cc/400?img=39",
+    "details": "Priya works in AI development and enjoys classical dance."
+  },
+  {
+    "id": 9,
+    "name": "Ravi Sharma",
+    "age": 34,
+    "location": "Jaipur, Rajasthan",
+    "occupation": "Civil Engineer",
+    "about": "Hardworking, grounded, loves heritage sites.",
+    "image": "https://i.pravatar.cc/400?img=8",
+    "details": "Ravi is a project engineer who enjoys history and photography."
+  },
+  {
+    "id": 10,
+    "name": "Ankita Verma",
+    "age": 29,
+    "location": "Lucknow, UP",
+    "occupation": "Fashion Designer",
+    "about": "Elegant, artistic, passionate about culture.",
+    "image": "https://i.pravatar.cc/400?img=45",
+    "details": "Ankita owns a boutique and designs bridal wear."
+  }
+]
