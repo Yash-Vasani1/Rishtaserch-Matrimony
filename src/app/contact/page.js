@@ -42,7 +42,7 @@ export default function Contact() {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        const whatsappNumber = "919876543210"; // your WhatsApp number without +
+        const whatsappNumber = "918849367258"; // your WhatsApp number without +
 
         const whatsappMessage =
             `Hello, I want to contact you.\n\n` +
@@ -238,7 +238,7 @@ export default function Contact() {
                             <Stack spacing={2}>
                                 <Stack direction="row" alignItems="center" spacing={2}>
                                     <PhoneIcon sx={{ color: "#A93C55" }} />
-                                    <Typography>+91 9876543210</Typography>
+                                    <Typography>+91 8849367258</Typography>
                                 </Stack>
 
                                 <Stack direction="row" alignItems="center" spacing={2}>
@@ -248,14 +248,17 @@ export default function Contact() {
 
                                 <Stack direction="row" alignItems="center" spacing={2}>
                                     <LocationOnIcon sx={{ color: "#A93C55" }} />
-                                    <Typography>Ahmedabad, Gujarat, India</Typography>
+                                    <Typography>
+                                        5th Floor, 505 Akruti Complex, Nr. Stadium Cross Road, Navrangpura <br />
+                                        Ahmedabad, Gujarat 380009, India
+                                    </Typography>
                                 </Stack>
                             </Stack>
 
                             {/* Social Icons */}
                             <Stack direction="row" spacing={2} sx={{ mt: 3 }}>
                                 <IconButton
-                                    onClick={() => window.open("https://wa.me/919876543210", "_blank")}
+                                    onClick={() => window.open("https://wa.me/918849367258", "_blank")}
                                 >
                                     <WhatsAppIcon sx={{ color: "#25D366" }} />
                                 </IconButton>

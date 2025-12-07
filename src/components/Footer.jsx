@@ -77,15 +77,21 @@ export default function Footer() {
           sx={{ mb: 4 }}
         >
           {pages.map((page) => (
-            <Link key={page.name} href={page.href} passHref legacyBehavior>
+            <Link
+              key={page.name}
+              href={page.href}
+              style={{ textDecoration: "none" }}
+            >
               <MuiLink
                 underline="none"
                 sx={{
-                  color: 'text.secondary',
+                  color: "text.secondary",
                   fontWeight: 500,
-                  transition: '0.3s',
-                  '&:hover': { color: '#A93C55' },
+                  transition: "0.3s",
+                  cursor: "pointer",
+                  "&:hover": { color: "#A93C55" },
                 }}
+                component="span"
               >
                 {page.name}
               </MuiLink>
@@ -97,7 +103,8 @@ export default function Footer() {
 
         {/* Address */}
         <Typography variant="body2" color="text.secondary" textAlign="center" sx={{ mb: 4 }}>
-          123 Love Street, Ahmedabad, Gujarat, India
+          5th Floor, 505 Akruti Complex, Nr. Stadium Cross Road, C.G. Road, Navrangpura <br />
+          Ahmedabad, Gujarat 380009, India
         </Typography>
 
         {/* Social Icons */}
@@ -128,7 +135,7 @@ export default function Footer() {
           </IconButton>
           <IconButton
             component="a"
-            href="https://wa.me/919876543210"
+            href="https://wa.me/918849367258"
             target="_blank"
             sx={{
               color: '#25D366',

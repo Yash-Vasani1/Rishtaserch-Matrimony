@@ -1,34 +1,46 @@
-// components/Header.jsx
-'use client';
+"use client";
 
-import React from 'react';
-import Link from 'next/link';
-import AppBar from '@mui/material/AppBar';
-import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
-import MenuIcon from '@mui/icons-material/Menu';
-import CloseIcon from '@mui/icons-material/Close';
-import Button from '@mui/material/Button';
-import Box from '@mui/material/Box';
-import Drawer from '@mui/material/Drawer';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import Typography from '@mui/material/Typography';
-import Divider from '@mui/material/Divider';
-import { useTheme } from '@mui/material/styles';
-import useMediaQuery from '@mui/material/useMediaQuery';
+import React, { useEffect, useState } from "react";
+import Link from "next/link";
+import {
+  AppBar,
+  Toolbar,
+  IconButton,
+  Box,
+  Button,
+  Drawer,
+  List,
+  ListItem,
+  Typography,
+  Divider,
+  useScrollTrigger,
+} from "@mui/material";
+import MenuIcon from "@mui/icons-material/Menu";
+import CloseIcon from "@mui/icons-material/Close";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { usePathname } from "next/navigation";
 
 const navItems = [
-  { label: 'Members', href: '/members' },
-  { label: 'Success Stories', href: '/success_stories' },
-  { label: 'About', href: '/about' },
-  { label: 'Contact', href: '/contact' },
+  { label: "Members", href: "/members" },
+  { label: "Success Stories", href: "/success_stories" },
+  { label: "About", href: "/about" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export default function Header() {
-  const [open, setOpen] = React.useState(false);
-  const theme = useTheme();
-  const isMdUp = useMediaQuery(theme.breakpoints.up('md'));
+  const [open, setOpen] = useState(false);
+  const pathname = usePathname();
+
+  useEffect(() => {
+    AOS.init({
+      duration: 900,
+      once: true,
+    });
+  }, []);
+
+  // shadow when scrolling
+  const trigger = useScrollTrigger({ disableHysteresis: true, threshold: 10 });
 
   return (
     <>
@@ -36,112 +48,121 @@ export default function Header() {
         position="sticky"
         elevation={0}
         sx={{
-          backdropFilter: 'saturate(120%) blur(6px)',
-          backgroundColor: 'rgba(255,255,255,0.6)',
-          borderBottom: 1,
-          borderColor: 'divider',
+          backdropFilter: "blur(15px)",
+          background: "rgba(255,255,255,0.7)",
+          transition: "0.3s ease",
+          borderBottom: trigger ? "1px solid rgba(169,60,85,0.25)" : "1px solid transparent",
+          boxShadow: trigger ? "0 4px 20px rgba(0,0,0,0.05)" : "none",
+          zIndex: 1000,
         }}
       >
-        <Toolbar sx={{ display: 'flex', justifyContent: 'space-between', gap: 2 }}>
-          {/* Logo / Brand */}
-          <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
-            <Link href="/" style={{ textDecoration: 'none' }}>
-              <Typography
-                component="span"
-                sx={{
-                  fontWeight: 700,
-                  fontSize: { xs: '1rem', sm: '1.25rem' },
-                  color: 'primary.main',
-                  letterSpacing: '-0.2px',
-                  transition: 'transform .25s ease',
-                  ':hover': { transform: 'translateY(-2px)' }, // micro animation
-                }}
-              >
-                Rishtaserch Matrimony
-              </Typography>
-            </Link>
+        <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
+          {/* LOGO */}
+          <Link href="/" style={{ textDecoration: "none" }}>
+            <Box
+              component="img"
+              src="/logo/logo_png.png"   // <-- put your logo file in /public folder
+              alt="Rishtaserch Matrimony Logo"
+              data-aos="fade-right"
+              sx={{
+                marginLeft: "65px",
+                height: { xs: 40, md: 55 }, // responsive size
+                cursor: "pointer",
+                transition: "0.3s ease",
+                scale: 5,
+              }}
+            />
+          </Link>
+
+          {/* Desktop Menu */}
+          <Box sx={{ display: { xs: "none", md: "flex" }, gap: 3 }}>
+            {navItems.map((item) => (
+              <Link key={item.href} href={item.href} style={{ textDecoration: "none" }}>
+                <Button
+                  data-aos="fade-down"
+                  sx={{
+                    fontSize: "1rem",
+                    textTransform: "none",
+                    fontWeight: pathname === item.href ? 700 : 500,
+                    color: pathname === item.href ? "#A93C55" : "text.primary",
+                    transition: "0.25s",
+                    "&:hover": {
+                      color: "#A93C55",
+                      transform: "translateY(-4px)",
+                    },
+                    borderBottom: pathname === item.href ? "2px solid #C7A17A" : "none",
+                    borderRadius: 0,
+                  }}
+                >
+                  {item.label}
+                </Button>
+              </Link>
+            ))}
           </Box>
 
-          {/* Desktop nav */}
-          {isMdUp ? (
-            <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
-              {navItems.map((n) => (
-                <Link key={n.href} href={n.href} style={{ textDecoration: 'none' }}>
-                  <Button
-                    size="medium"
-                    variant="text"
-                    sx={{
-                      color: 'text.primary',
-                      textTransform: 'none',
-                      fontSize: '1rem',
-                      ':hover': { backgroundColor: 'transparent', color: 'primary.main', transform: 'translateY(-2px)' },
-                      transition: 'color .18s ease, transform .18s ease',
-                    }}
-                  >
-                    {n.label}
-                  </Button>
-                </Link>
-              ))}
-
-              {/* <Link href="/contact" style={{ textDecoration: 'none' }}>
-                <Button variant="contained" size="medium" sx={{ ml: 1, borderRadius: 2 }}>
-                  Contact
-                </Button>
-              </Link> */}
-            </Box>
-          ) : (
-            // Mobile menu icon
-            <IconButton edge="end" aria-label="menu" onClick={() => setOpen(true)}>
-              <MenuIcon />
-            </IconButton>
-          )}
+          {/* Mobile Menu Icon */}
+          <IconButton
+            sx={{ display: { xs: "block", md: "none" }, color: "#A93C55" }}
+            onClick={() => setOpen(true)}
+          >
+            <MenuIcon />
+          </IconButton>
         </Toolbar>
       </AppBar>
 
-      {/* Mobile Drawer */}
-      <Drawer anchor="right" open={open} onClose={() => setOpen(false)} PaperProps={{ sx: { width: 300 } }}>
-        <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', px: 2, py: 1 }}>
-          <Typography variant="h6" sx={{ fontWeight: 700, color: 'primary.main' }}>
-            Rishtaserch
-          </Typography>
-          <IconButton onClick={() => setOpen(false)} aria-label="close drawer">
-            <CloseIcon />
-          </IconButton>
-        </Box>
+      {/* MOBILE DRAWER */}
+      <Drawer anchor="right" open={open} onClose={() => setOpen(false)}>
+        <Box sx={{ width: 280, p: 2 }}>
+          <Box sx={{ display: "flex", justifyContent: "space-between", mb: 2 }}>
+            <Typography sx={{ fontWeight: 700, fontFamily: "Playfair Display" }}>
+              Menu
+            </Typography>
+            <IconButton onClick={() => setOpen(false)}>
+              <CloseIcon />
+            </IconButton>
+          </Box>
+          <Divider />
 
-        <Divider />
+          <List sx={{ mt: 2 }}>
+            {navItems.map((n) => (
+              <ListItem key={n.href} onClick={() => setOpen(false)}>
+                <Link href={n.href} style={{ width: "100%", textDecoration: "none" }}>
+                  <Typography
+                    sx={{
+                      py: 1.3,
+                      px: 2,
+                      borderRadius: 2,
+                      fontSize: "1rem",
+                      transition: "0.3s",
+                      background: pathname === n.href ? "rgba(169,60,85,0.12)" : "transparent",
+                      color: pathname === n.href ? "#A93C55" : "text.primary",
+                      "&:hover": {
+                        background: "rgba(169,60,85,0.12)",
+                      },
+                    }}
+                  >
+                    {n.label}
+                  </Typography>
+                </Link>
+              </ListItem>
+            ))}
 
-        <List>
-          {navItems.map((n) => (
-            <ListItem key={n.href} disablePadding>
-              <Link href={n.href} style={{ width: '100%', textDecoration: 'none' }}>
-                <Box
+            <ListItem sx={{ mt: 2 }}>
+              <Link href="/contact" style={{ width: "100%", textDecoration: "none" }}>
+                <Button
+                  fullWidth
+                  variant="contained"
                   sx={{
-                    px: 3,
-                    py: 1.25,
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'space-between',
-                    ':hover': { backgroundColor: 'action.hover' },
+                    borderRadius: "50px",
+                    background: "linear-gradient(90deg,#A93C55,#73293D)",
                   }}
-                  onClick={() => setOpen(false)}
                 >
-                  <Typography sx={{ fontSize: '1rem' }}>{n.label}</Typography>
-                </Box>
-              </Link>
-            </ListItem>
-          ))}
-
-          {/* <ListItem disablePadding>
-            <Box sx={{ px: 3, py: 2 }}>
-              <Link href="/contact" style={{ textDecoration: 'none' }}>
-                <Button fullWidth variant="contained" size="large">
-                  Contact
+                  Contact Us
                 </Button>
               </Link>
-            </Box>
-          </ListItem> */}
-        </List>
+            </ListItem>
+          </List>
+        </Box>
       </Drawer>
     </>
   );
