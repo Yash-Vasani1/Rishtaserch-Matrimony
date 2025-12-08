@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "title": "Aarav & Priya",
+    "excerpt": "Met through Rishtaserch and tied the knot in 2024.",
+    "img": "/SuccessStories/SuccessStories1.png"
+  },
+  {
+    "id": 2,
+    "title": "Sahil & Neha",
+    "excerpt": "Their shared love for creativity brought them together.",
+    "img": "/SuccessStories/SuccessStories2.png"
+  },
+  {
+    "id": 3,
+    "title": "Rohan & Aisha",
+    "excerpt": "A perfect match across cities — now happily married.",
+    "img": "/SuccessStories/SuccessStories3.png"
+  },
+  {
+    "id": 4,
+    "title": "Mihir & Kavya",
+    "excerpt": "A beautiful journey from strangers to life partners.",
+    "img": "/SuccessStories/SuccessStories4.png"
+  }
+]

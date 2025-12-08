@@ -53,7 +53,9 @@ export default function Header() {
           transition: "0.3s ease",
           borderBottom: trigger ? "1px solid rgba(169,60,85,0.25)" : "1px solid transparent",
           boxShadow: trigger ? "0 4px 20px rgba(0,0,0,0.05)" : "none",
-          zIndex: 1000,
+          zIndex: 2000,
+          position: "fixed",     // instead of sticky
+          top: 0,
         }}
       >
         <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
@@ -69,7 +71,7 @@ export default function Header() {
                 height: { xs: 40, md: 55 }, // responsive size
                 cursor: "pointer",
                 transition: "0.3s ease",
-                scale: 5,
+                scale: 4,
               }}
             />
           </Link>

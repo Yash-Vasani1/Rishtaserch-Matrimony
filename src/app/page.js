@@ -7,12 +7,17 @@ import "aos/dist/aos.css";
 import people from "@/data/people.json"; // use first 6 members
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import SuccessStoriesData from "@/data/SuccessStoriesData"
+
+
 
 export default function Home() {
   const router = useRouter();
   useEffect(() => {
     AOS.init({ duration: 900, once: true });
   }, []);
+
+  const stories = SuccessStoriesData;
 
   const featuredMembers = people.slice(0, 6);
 
@@ -22,44 +27,63 @@ export default function Home() {
       <Box
         sx={{
           position: "relative",
-          height: { xs: "80vh", md: "90vh" },
+          height: { xs: "85vh", md: "95vh" },
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
           textAlign: "center",
           px: 2,
           overflow: "hidden",
+          color: "#fff",
         }}
       >
-        {/* Hero Image Placeholder */}
+        {/* Background Image */}
         <Box
           sx={{
             position: "absolute",
             inset: 0,
-            background: "rgba(169,60,85,0.1)", // soft overlay
             backgroundImage: 'url("/Hero_img.png")',
             backgroundSize: "cover",
-            backgroundPosition: "center",
-            zIndex: -1,
+            backgroundPosition: "center 20%",
+            backgroundAttachment: "fixed", // ⭐ FIXED BACKGROUND
+            zIndex: 0,
           }}
         />
 
-        <Box data-aos="fade-up">
+        {/* Dark Overlay */}
+        <Box
+          sx={{
+            position: "absolute",
+            inset: 0,
+            background: "rgba(0, 0, 0, 0.2)", // contrast overlay
+            zIndex: 1,
+          }}
+        />
+
+        {/* Text + Buttons */}
+        <Box sx={{ position: "relative", zIndex: 2 }} data-aos="fade-up">
           <Typography
             variant="h2"
             sx={{
               fontFamily: "Playfair Display",
               fontWeight: 700,
-              background: "linear-gradient(90deg,#A93C55,#73293D)",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
               mb: 2,
               lineHeight: 1.2,
             }}
           >
             Find Someone Who Feels Like Home
           </Typography>
-          <Typography variant="h6" color="text.secondary" sx={{ mb: 4, maxWidth: 650, mx: "auto", fontStyle: "italic" }}>
+
+          <Typography
+            variant="h6"
+            sx={{
+              mb: 4,
+              maxWidth: 650,
+              mx: "auto",
+              fontStyle: "italic",
+              color: "rgba(255,255,255,0.85)",
+            }}
+          >
             Meaningful relationships built with trust, respect & shared values.
           </Typography>
 
@@ -85,16 +109,17 @@ export default function Home() {
             >
               Get Started
             </Button>
+
             <Button
               variant="outlined"
               sx={{
-                borderColor: "#C7A17A",
-                color: "#A93C55",
+                borderColor: "#fff",
+                color: "#fff",
                 px: 4,
                 py: 1.5,
                 fontWeight: 600,
                 borderRadius: 3,
-                "&:hover": { background: "rgba(169,60,85,0.08)" },
+                "&:hover": { background: "rgba(255,255,255,0.1)" },
               }}
               onClick={() => router.push("/members")}
             >
@@ -103,6 +128,7 @@ export default function Home() {
           </Stack>
         </Box>
       </Box>
+
 
       {/* ================= ABOUT PREVIEW ================= */}
       <Container maxWidth="lg" sx={{ py: 12 }} data-aos="fade-up">
@@ -343,7 +369,7 @@ export default function Home() {
           Where Beautiful Stories Begin
         </Typography>
         <Grid container spacing={4}>
-          {people.slice(0, 3).map((p, idx) => (
+          {stories.slice(0, 3).map((p, idx) => (
             <Grid size={{ xs: 12, sm: 6, md: 4 }} key={idx}>
               <Paper
                 elevation={3}
@@ -357,16 +383,16 @@ export default function Home() {
                 }}
               >
                 <Avatar
-                  src={p.image}
-                  alt={p.name}
+                  src={p.img}
+                  alt={p.title}
                   variant="rounded"
                   sx={{ width: "100%", height: 280, objectFit: "cover", mb: 2 }}
                 />
                 <Typography variant="h6" sx={{ fontWeight: 700 }}>
-                  {p.name}
+                  {p.title}
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
-                  {p.about.slice(0, 70)}...
+                  {p.excerpt.slice(0, 70)}...
                 </Typography>
               </Paper>
             </Grid>

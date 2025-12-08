@@ -4,33 +4,9 @@ import { Box, Typography, Grid, Paper } from "@mui/material";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+import SuccessStoriesData from "@/data/SuccessStoriesData"
 
-const stories = [
-  {
-    id: 1,
-    title: "Aarav & Priya",
-    excerpt: "Met through Rishtaserch and tied the knot in 2024.",
-    img: "https://images.unsplash.com/photo-1529634991782-dffdfc6a0435?q=80&w=500",
-  },
-  {
-    id: 2,
-    title: "Sahil & Neha",
-    excerpt: "Their shared love for creativity brought them together.",
-    img: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?q=80&w=500",
-  },
-  {
-    id: 3,
-    title: "Rohan & Aisha",
-    excerpt: "A perfect match across cities — now happily married.",
-    img: "https://images.unsplash.com/photo-1500048993953-d23a436266cf?q=80&w=500",
-  },
-  {
-    id: 4,
-    title: "Mihir & Kavya",
-    excerpt: "A beautiful journey from strangers to life partners.",
-    img: "https://images.unsplash.com/photo-1500917293891-ef795e70e1f6?q=80&w=500",
-  },
-];
+const stories = SuccessStoriesData;
 
 export default function SuccessStories() {
   useEffect(() => {

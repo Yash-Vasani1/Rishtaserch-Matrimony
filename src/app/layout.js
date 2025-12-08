@@ -12,7 +12,7 @@ export default function RootLayout({ children }) {
       <body>
         <ThemeProvider theme={theme}>
           <Header />
-          <main style={{ minHeight: "70vh", padding: "20px 0" }}>
+          <main style={{ minHeight: "70vh", padding: "37px 0" }}>
             {children}
           </main>
           <Footer />
