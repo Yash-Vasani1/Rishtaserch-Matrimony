@@ -1,27 +1,38 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import {
   AppBar,
   Toolbar,
-  IconButton,
-  Box,
   Button,
+  Box,
+  IconButton,
   Drawer,
   List,
   ListItem,
+  ListItemText,
+  Collapse,
+  Paper,
   Typography,
-  Divider,
-  useScrollTrigger,
+  ListItemButton,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import CloseIcon from "@mui/icons-material/Close";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import { useScrollTrigger } from "@mui/material";
 import { usePathname } from "next/navigation";
 
+
 const navItems = [
+  {
+    label: "Services",
+    children: [
+      { label: "Personalised Matchmaking", href: "/services/matchmaking" },
+      { label: "Background Verification", href: "/services/background" },
+      { label: "Kundli Matching", href: "/services/kundli" },
+    ],
+  },
   { label: "Members", href: "/members" },
   { label: "Success Stories", href: "/success_stories" },
   { label: "About", href: "/about" },
@@ -29,23 +40,27 @@ const navItems = [
 ];
 
 export default function Header() {
-  const [open, setOpen] = useState(false);
+  const [drawerOpen, setDrawerOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false); // mobile drawer
+  const [hoverServices, setHoverServices] = useState(false); // desktop hover
+  const trigger = useScrollTrigger({ disableHysteresis: true, threshold: 10 });
   const pathname = usePathname();
 
-  useEffect(() => {
-    AOS.init({
-      duration: 900,
-      once: true,
-    });
-  }, []);
 
-  // shadow when scrolling
-  const trigger = useScrollTrigger({ disableHysteresis: true, threshold: 10 });
+  // Desktop hover delay to prevent flicker
+  let hoverTimeout;
+  const handleMouseEnter = () => {
+    clearTimeout(hoverTimeout);
+    setHoverServices(true);
+  };
+  const handleMouseLeave = () => {
+    hoverTimeout = setTimeout(() => setHoverServices(false), 150);
+  };
 
   return (
     <>
       <AppBar
-        position="sticky"
+        position="fixed"
         elevation={0}
         sx={{
           backdropFilter: "blur(15px)",
@@ -54,117 +69,183 @@ export default function Header() {
           borderBottom: trigger ? "1px solid rgba(169,60,85,0.25)" : "1px solid transparent",
           boxShadow: trigger ? "0 4px 20px rgba(0,0,0,0.05)" : "none",
           zIndex: 2000,
-          position: "fixed",     // instead of sticky
           top: 0,
         }}
       >
-        <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
-          {/* LOGO */}
-          <Link href="/" style={{ textDecoration: "none" }}>
+        <Toolbar sx={{ display: "flex", justifyContent: "space-between", px: { xs: 2, md: 6 } }}>
+          {/* Logo */}
+          <Link href="/">
             <Box
               component="img"
-              src="/logo/logo_png.png"   // <-- put your logo file in /public folder
-              alt="Rishtaserch Matrimony Logo"
-              data-aos="fade-right"
-              sx={{
-                marginLeft: "65px",
-                height: { xs: 40, md: 55 }, // responsive size
-                cursor: "pointer",
-                transition: "0.3s ease",
-                scale: 5,
-              }}
+              src="/logo/logo_png.png"
+              alt="Rishtaserch Logo"
+              sx={{ marginLeft: "45px", height: { xs: 40, md: 55 }, cursor: "pointer", scale: 5 }}
             />
           </Link>
 
           {/* Desktop Menu */}
           <Box sx={{ display: { xs: "none", md: "flex" }, gap: 3 }}>
-            {navItems.map((item) => (
-              <Link key={item.href} href={item.href} style={{ textDecoration: "none" }}>
-                <Button
-                  data-aos="fade-down"
-                  sx={{
-                    fontSize: "1rem",
-                    textTransform: "none",
-                    fontWeight: pathname === item.href ? 700 : 500,
-                    color: pathname === item.href ? "#A93C55" : "text.primary",
-                    transition: "0.25s",
-                    "&:hover": {
-                      color: "#A93C55",
-                      transform: "translateY(-4px)",
-                    },
-                    borderBottom: pathname === item.href ? "2px solid #C7A17A" : "none",
-                    borderRadius: 0,
-                  }}
+            {navItems.map((item) =>
+              item.children ? (
+                <Box
+                  key={item.label}
+                  onMouseEnter={handleMouseEnter}
+                  onMouseLeave={handleMouseLeave}
+                  sx={{ position: "relative" }}
                 >
-                  {item.label}
-                </Button>
-              </Link>
-            ))}
+                  <Button
+                    sx={{
+                      textTransform: "none",
+                      fontWeight: 500,
+                      color: pathname === item.href ? "#A93C55" : "#2A2A2A",
+                      "&:hover": { color: "#A93C55" },
+                    }}
+                  >
+                    {item.label} <ExpandMoreIcon sx={{ fontSize: 18, ml: 0.5 }} />
+                  </Button>
+
+                  {/* Dropdown */}
+                  {hoverServices && (
+                    <Paper
+                      elevation={4}
+                      sx={{
+                        position: "absolute",
+                        top: "100%",
+                        left: 0,
+                        mt: 1,
+                        borderRadius: 2,
+                        minWidth: 220,
+                        overflow: "hidden",
+                        zIndex: 1000,
+                      }}
+                    >
+                      {item.children.map((sub) => (
+                        <Link key={sub.href} href={sub.href} style={{ textDecoration: "none" }}>
+                          <Button
+                            sx={{
+                              justifyContent: "flex-start",
+                              width: "100%",
+                              px: 3,
+                              py: 1.2,
+                              textTransform: "none",
+                              color: pathname === sub.href ? "#A93C55" : "#2A2A2A",
+                              "&:hover": { backgroundColor: "#F7EDED", color: "#A93C55" },
+                            }}
+                          >
+                            {sub.label}
+                          </Button>
+                        </Link>
+                      ))}
+                    </Paper>
+                  )}
+                </Box>
+              ) : (
+                <Link key={item.href} href={item.href} style={{ textDecoration: "none" }}>
+                  <Button
+                    sx={{
+                      textTransform: "none",
+                      fontWeight: 500,
+                      color: pathname === item.href ? "#A93C55" : "#2A2A2A",
+                      "&:hover": { color: "#A93C55" },
+                    }}
+                  >
+                    {item.label}
+                  </Button>
+                </Link>
+              )
+            )}
           </Box>
 
           {/* Mobile Menu Icon */}
           <IconButton
             sx={{ display: { xs: "block", md: "none" }, color: "#A93C55" }}
-            onClick={() => setOpen(true)}
+            onClick={() => setDrawerOpen(true)}
           >
             <MenuIcon />
           </IconButton>
         </Toolbar>
       </AppBar>
 
-      {/* MOBILE DRAWER */}
-      <Drawer anchor="right" open={open} onClose={() => setOpen(false)}>
-        <Box sx={{ width: 280, p: 2 }}>
-          <Box sx={{ display: "flex", justifyContent: "space-between", mb: 2 }}>
-            <Typography sx={{ fontWeight: 700, fontFamily: "Playfair Display" }}>
-              Menu
-            </Typography>
-            <IconButton onClick={() => setOpen(false)}>
-              <CloseIcon />
-            </IconButton>
-          </Box>
-          <Divider />
+      {/* Mobile Drawer */}
+      <Drawer
+        anchor="right"
+        open={drawerOpen}
+        onClose={() => {
+          setDrawerOpen(false);
+          setServicesOpen(false);
+        }}
+        PaperProps={{
+          sx: {
+            width: "75%",
+            maxWidth: 320,
+            background: "#FFF8F9",
+            p: 3,
+          },
+        }}
+      >
+        <Box sx={{ display: "flex", justifyContent: "flex-end", mb: 2 }}>
+          <IconButton onClick={() => setDrawerOpen(false)} sx={{ color: "#A93C55" }}>
+            <CloseIcon />
+          </IconButton>
+        </Box>
 
-          <List sx={{ mt: 2 }}>
-            {navItems.map((n) => (
-              <ListItem key={n.href} onClick={() => setOpen(false)}>
-                <Link href={n.href} style={{ width: "100%", textDecoration: "none" }}>
-                  <Typography
+        <List sx={{ display: "flex", flexDirection: "column", gap: 1 }}>
+          {navItems.map((item) => (
+            <React.Fragment key={item.label}>
+              {item.children ? (
+                <>
+                  <ListItem button onClick={() => setServicesOpen(!servicesOpen)}>
+                    <ListItemText
+                      primary={item.label}
+                      primaryTypographyProps={{
+                        sx: { fontWeight: 600, color: "#A93C55" },
+                      }}
+                    />
+                    <ExpandMoreIcon
+                      sx={{
+                        transform: servicesOpen ? "rotate(180deg)" : "rotate(0deg)",
+                        transition: "0.3s",
+                      }}
+                    />
+                  </ListItem>
+                  <Collapse in={servicesOpen} timeout={300} unmountOnExit>
+                    <List sx={{ pl: 4 }}>
+                      {item.children.map((sub) => (
+                        <ListItem
+                          key={sub.href}
+                          button
+                          component={Link}
+                          href={sub.href}
+                          onClick={() => setDrawerOpen(false)}
+                        >
+                          <ListItemText
+                            primary={sub.label}
+                            primaryTypographyProps={{ sx: { fontSize: "0.95rem" } }}
+                          />
+                        </ListItem>
+                      ))}
+                    </List>
+                  </Collapse>
+                </>
+              ) : (
+                <ListItem disablePadding>
+                  <ListItemButton
+                    component={Link}
+                    href={item.href}
                     sx={{
-                      py: 1.3,
-                      px: 2,
-                      borderRadius: 2,
-                      fontSize: "1rem",
-                      transition: "0.3s",
-                      background: pathname === n.href ? "rgba(169,60,85,0.12)" : "transparent",
-                      color: pathname === n.href ? "#A93C55" : "text.primary",
-                      "&:hover": {
-                        background: "rgba(169,60,85,0.12)",
-                      },
+                      backgroundColor:
+                        pathname === (item.href) ? "rgba(169,60,85,0.12)" : "transparent",
+                      color: pathname === (item.href) ? "#A93C55" : "#2A2A2A",
                     }}
                   >
-                    {n.label}
-                  </Typography>
-                </Link>
-              </ListItem>
-            ))}
+                    <ListItemText primary={item.label} />
+                  </ListItemButton>
 
-            <ListItem sx={{ mt: 2 }}>
-              <Link href="/contact" style={{ width: "100%", textDecoration: "none" }}>
-                <Button
-                  fullWidth
-                  variant="contained"
-                  sx={{
-                    borderRadius: "50px",
-                    background: "linear-gradient(90deg,#A93C55,#73293D)",
-                  }}
-                >
-                  Contact Us
-                </Button>
-              </Link>
-            </ListItem>
-          </List>
-        </Box>
+                </ListItem>
+              )}
+            </React.Fragment>
+          ))}
+        </List>
       </Drawer>
     </>
   );
