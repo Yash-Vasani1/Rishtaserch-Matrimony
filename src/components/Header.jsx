@@ -71,7 +71,7 @@ export default function Header() {
                 height: { xs: 40, md: 55 }, // responsive size
                 cursor: "pointer",
                 transition: "0.3s ease",
-                scale: 4,
+                scale: 5,
               }}
             />
           </Link>
