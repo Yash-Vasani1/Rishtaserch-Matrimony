@@ -116,7 +116,7 @@ export default function EliteClients() {
       {/* Animated Grid */}
       <Grid container spacing={3} justifyContent="center">
         {items.map((item, index) => (
-          <Grid key={index} xs={6} sm={4} md={3}>
+          <Grid key={index} size={{xs:6, sm:4, md:3}}>
             <Paper
               elevation={3}
               data-aos="zoom-in"

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import {
   AppBar,
@@ -17,12 +17,12 @@ import {
   Typography,
   ListItemButton,
 } from "@mui/material";
+
 import MenuIcon from "@mui/icons-material/Menu";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import CloseIcon from "@mui/icons-material/Close";
 import { useScrollTrigger } from "@mui/material";
 import { usePathname } from "next/navigation";
-
 
 const navItems = [
   {
@@ -41,13 +41,12 @@ const navItems = [
 
 export default function Header() {
   const [drawerOpen, setDrawerOpen] = useState(false);
-  const [servicesOpen, setServicesOpen] = useState(false); // mobile drawer
-  const [hoverServices, setHoverServices] = useState(false); // desktop hover
+  const [servicesOpen, setServicesOpen] = useState(false);
+  const [hoverServices, setHoverServices] = useState(false);
   const trigger = useScrollTrigger({ disableHysteresis: true, threshold: 10 });
   const pathname = usePathname();
 
-
-  // Desktop hover delay to prevent flicker
+  // Hover logic
   let hoverTimeout;
   const handleMouseEnter = () => {
     clearTimeout(hoverTimeout);
@@ -59,31 +58,37 @@ export default function Header() {
 
   return (
     <>
+      {/* HEADER */}
       <AppBar
         position="fixed"
         elevation={0}
         sx={{
           backdropFilter: "blur(15px)",
-          background: "rgba(255,255,255,0.7)",
+          background: "rgba(255,255,255,0.75)",
           transition: "0.3s ease",
           borderBottom: trigger ? "1px solid rgba(169,60,85,0.25)" : "1px solid transparent",
           boxShadow: trigger ? "0 4px 20px rgba(0,0,0,0.05)" : "none",
           zIndex: 2000,
-          top: 0,
         }}
       >
-        <Toolbar sx={{ display: "flex", justifyContent: "space-between", px: { xs: 2, md: 6 } }}>
-          {/* Logo */}
+        <Toolbar sx={{ display: "flex", justifyContent: "space-between", px: { xs: 1.5, md: 6 } }}>
+
+          {/* LOGO */}
           <Link href="/">
             <Box
               component="img"
               src="/logo/logo_png.png"
               alt="Rishtaserch Logo"
-              sx={{ marginLeft: "45px", height: { xs: 40, md: 55 }, cursor: "pointer", scale: 5 }}
+              sx={{
+                height: { xs: 40, md: 55 },
+                cursor: "pointer",
+                ml: { xs: "45px", md: "45px" },  // FIXED
+                transform: "scale(5)", // FIXED
+              }}
             />
           </Link>
 
-          {/* Desktop Menu */}
+          {/* DESKTOP MENU */}
           <Box sx={{ display: { xs: "none", md: "flex" }, gap: 3 }}>
             {navItems.map((item) =>
               item.children ? (
@@ -97,11 +102,12 @@ export default function Header() {
                     sx={{
                       textTransform: "none",
                       fontWeight: 500,
-                      color: pathname === item.href ? "#A93C55" : "#2A2A2A",
+                      color: "#2A2A2A",
                       "&:hover": { color: "#A93C55" },
                     }}
                   >
-                    {item.label} <ExpandMoreIcon sx={{ fontSize: 18, ml: 0.5 }} />
+                    {item.label}
+                    <ExpandMoreIcon sx={{ fontSize: 18, ml: 0.5 }} />
                   </Button>
 
                   {/* Dropdown */}
@@ -116,7 +122,7 @@ export default function Header() {
                         borderRadius: 2,
                         minWidth: 220,
                         overflow: "hidden",
-                        zIndex: 1000,
+                        zIndex: 9999,
                       }}
                     >
                       {item.children.map((sub) => (
@@ -156,7 +162,7 @@ export default function Header() {
             )}
           </Box>
 
-          {/* Mobile Menu Icon */}
+          {/* MOBILE MENU ICON */}
           <IconButton
             sx={{ display: { xs: "block", md: "none" }, color: "#A93C55" }}
             onClick={() => setDrawerOpen(true)}
@@ -166,7 +172,7 @@ export default function Header() {
         </Toolbar>
       </AppBar>
 
-      {/* Mobile Drawer */}
+      {/* MOBILE DRAWER */}
       <Drawer
         anchor="right"
         open={drawerOpen}
@@ -183,18 +189,22 @@ export default function Header() {
           },
         }}
       >
-        <Box sx={{ display: "flex", justifyContent: "flex-end", mb: 2 }}>
+        <Box sx={{ display: "flex", justifyContent: "flex-end", mb: 1 }}>
           <IconButton onClick={() => setDrawerOpen(false)} sx={{ color: "#A93C55" }}>
             <CloseIcon />
           </IconButton>
         </Box>
 
         <List sx={{ display: "flex", flexDirection: "column", gap: 1 }}>
-          {navItems.map((item) => (
-            <React.Fragment key={item.label}>
-              {item.children ? (
-                <>
-                  <ListItem button onClick={() => setServicesOpen(!servicesOpen)}>
+
+          {/* MOBILE NAV ITEMS */}
+          {navItems.map((item) =>
+            item.children ? (
+              <React.Fragment key={item.label}>
+
+                {/* Parent item */}
+                <ListItem disablePadding>
+                  <ListItemButton onClick={() => setServicesOpen(!servicesOpen)}>
                     <ListItemText
                       primary={item.label}
                       primaryTypographyProps={{
@@ -207,45 +217,45 @@ export default function Header() {
                         transition: "0.3s",
                       }}
                     />
-                  </ListItem>
-                  <Collapse in={servicesOpen} timeout={300} unmountOnExit>
-                    <List sx={{ pl: 4 }}>
-                      {item.children.map((sub) => (
-                        <ListItem
-                          key={sub.href}
-                          button
+                  </ListItemButton>
+                </ListItem>
+
+                {/* Expandable submenu */}
+                <Collapse in={servicesOpen} timeout={300} unmountOnExit>
+                  <List sx={{ pl: 3 }}>
+                    {item.children.map((sub) => (
+                      <ListItem disablePadding key={sub.href}>
+                        <ListItemButton
                           component={Link}
                           href={sub.href}
                           onClick={() => setDrawerOpen(false)}
                         >
-                          <ListItemText
-                            primary={sub.label}
-                            primaryTypographyProps={{ sx: { fontSize: "0.95rem" } }}
-                          />
-                        </ListItem>
-                      ))}
-                    </List>
-                  </Collapse>
-                </>
-              ) : (
-                <ListItem disablePadding>
-                  <ListItemButton
-                    component={Link}
-                    href={item.href}
-                    sx={{
-                      backgroundColor:
-                        pathname === (item.href) ? "rgba(169,60,85,0.12)" : "transparent",
-                      color: pathname === (item.href) ? "#A93C55" : "#2A2A2A",
-                    }}
-                  >
-                    <ListItemText primary={item.label} />
-                  </ListItemButton>
-
-                </ListItem>
-              )}
-            </React.Fragment>
-          ))}
+                          <ListItemText primary={sub.label} />
+                        </ListItemButton>
+                      </ListItem>
+                    ))}
+                  </List>
+                </Collapse>
+              </React.Fragment>
+            ) : (
+              <ListItem disablePadding key={item.href}>
+                <ListItemButton
+                  component={Link}
+                  href={item.href}
+                  sx={{
+                    backgroundColor:
+                      pathname === item.href ? "rgba(169,60,85,0.12)" : "transparent",
+                    color: pathname === item.href ? "#A93C55" : "#2A2A2A",
+                  }}
+                  onClick={() => setDrawerOpen(false)}
+                >
+                  <ListItemText primary={item.label} />
+                </ListItemButton>
+              </ListItem>
+            )
+          )}
         </List>
+
       </Drawer>
     </>
   );
