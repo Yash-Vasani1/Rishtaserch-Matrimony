@@ -110,63 +110,63 @@
     "details": "Ruchi Pinalbhai Rajpura is a Corporate Professional in Project Management who is a Citizen in Canada. She was born in Ahmedabad, Gujarat, India and is 160 cm in height. Her father's name is Pinal Bhudharbhai Rajpura."
   },
   {
-  "id": 12,
-  "name": "Rutvik Sanjaykumar Patel",
-  "age": 28,
-  "location": "Atlanta, Georgia, USA",
-  "occupation": "Sr. Software Engineer",
-  "about": "Sr. Software Engineer at JPMorgan Chase, Green Card holder living in Atlanta with a Master's in Information Systems.",
-  "image": "/BioData_Photos/Rutvik_Patel.png",
-  "details": "Rutvik holds a Master's from NJIT and works as a Senior Software Engineer. He enjoys hiking and coding. His family is based in Ahmedabad."
-},
-{
-  "id": 13,
-  "name": "Rutwa Shah",
-  "age": 26,
-  "location": "Rajkot, Gujarat, India",
-  "occupation": "Business Owner (Marketing Agency)",
-  "about": "Entrepreneur in Rajkot running a Social Media Marketing agency. Holds a Bachelor of Business from QUT, Australia.",
-  "image": "/BioData_Photos/Rutwa_Shah.png",
-  "details": "Rutwa runs 'The Happy Door Agency'. Her family owns a prominent women's wear retail business in Rajkot. She is a Vaishnav Vaniya."
-},
-{
-  "id": 14,
-  "name": "Smit Patel",
-  "age": 27,
-  "location": "Toronto, Canada",
-  "occupation": "Dispute Analyst",
-  "about": "Canada PR holder working at CIBC Bank. Holds an MBA in Finance from Vancouver Island University.",
-  "image": "/BioData_Photos/Smit_Patel.png",
-  "details": "Smit is based in Toronto and has a background in Accounting and Finance. His family is originally from Mehsana and Gandhinagar, Gujarat."
-},
-{
-  "id": 15,
-  "name": "Jay Shah",
-  "age": 28,
-  "location": "Morrisville, North Carolina, USA",
-  "occupation": "Software Engineer",
-  "about": "US Citizen working as a Software Engineer at TCS. Holds a Bachelor's in Computer Science and is pursuing a Master's.",
-  "image": "/BioData_Photos/Jay_Shah.png",
-  "details": "Jay is a US Citizen living in North Carolina. He belongs to the Vaishnav Vanik caste and is originally from Bharuch, Gujarat."
-},
-{
-  "id": 16,
-  "name": "Naitik Maniar",
-  "age": 31,
-  "location": "Irvine, California, USA",
-  "occupation": "Sr. Technology Leader",
-  "about": "Sr. Technology Leader on an H1B visa in California. Holds a B.Tech in Electronics and Communication.",
-  "image": "/BioData_Photos/Naitik_Maniar.png",
-  "details": "Naitik works for a US-based Indian MNC in Irvine. He is a Vaishnav Vaniya originally from Jamnagar, Gujarat."
-},
-{
-  "id": 17,
-  "name": "Dr. Vaibhav Shah",
-  "age": 25,
-  "location": "Bardoli, Surat, Gujarat",
-  "occupation": "Medical Officer",
-  "about": "Medical Officer at Shree Sardar Smarak Hospital with an M.B.B.S degree. Aspires to start his own clinic.",
-  "image": "/BioData_Photos/Vaibhav_Shah.png",
-  "details": "Vaibhav is a doctor based in Bardoli. He completed his medical studies at GMERS, Valsad. He belongs to the Shwetambar Jain community."
-}
+    "id": 12,
+    "name": "Rutvik Sanjaykumar Patel",
+    "age": 28,
+    "location": "Atlanta, Georgia, USA",
+    "occupation": "Sr. Software Engineer",
+    "about": "Sr. Software Engineer at JPMorgan Chase, Green Card holder living in Atlanta with a Master's in Information Systems.",
+    "image": "/BioData_Photos/Rutvik_Patel.png",
+    "details": "Rutvik holds a Master's from NJIT and works as a Senior Software Engineer. He enjoys hiking and coding. His family is based in Ahmedabad."
+  },
+  {
+    "id": 13,
+    "name": "Rutwa Shah",
+    "age": 26,
+    "location": "Rajkot, Gujarat, India",
+    "occupation": "Business Owner (Marketing Agency)",
+    "about": "Entrepreneur in Rajkot running a Social Media Marketing agency. Holds a Bachelor of Business from QUT, Australia.",
+    "image": "/BioData_Photos/Rutwa_Shah.png",
+    "details": "Rutwa runs 'The Happy Door Agency'. Her family owns a prominent women's wear retail business in Rajkot. She is a Vaishnav Vaniya."
+  },
+  {
+    "id": 14,
+    "name": "Smit Patel",
+    "age": 27,
+    "location": "Toronto, Canada",
+    "occupation": "Dispute Analyst",
+    "about": "Canada PR holder working at CIBC Bank. Holds an MBA in Finance from Vancouver Island University.",
+    "image": "/BioData_Photos/Smit_Patel.png",
+    "details": "Smit is based in Toronto and has a background in Accounting and Finance. His family is originally from Mehsana and Gandhinagar, Gujarat."
+  },
+  {
+    "id": 15,
+    "name": "Jay Shah",
+    "age": 28,
+    "location": "Morrisville, North Carolina, USA",
+    "occupation": "Software Engineer",
+    "about": "US Citizen working as a Software Engineer at TCS. Holds a Bachelor's in Computer Science and is pursuing a Master's.",
+    "image": "/BioData_Photos/Jay_Shah.png",
+    "details": "Jay is a US Citizen living in North Carolina. He belongs to the Vaishnav Vanik caste and is originally from Bharuch, Gujarat."
+  },
+  {
+    "id": 16,
+    "name": "Naitik Maniar",
+    "age": 31,
+    "location": "Irvine, California, USA",
+    "occupation": "Sr. Technology Leader",
+    "about": "Sr. Technology Leader on an H1B visa in California. Holds a B.Tech in Electronics and Communication.",
+    "image": "/BioData_Photos/Naitik_Maniar.png",
+    "details": "Naitik works for a US-based Indian MNC in Irvine. He is a Vaishnav Vaniya originally from Jamnagar, Gujarat."
+  },
+  {
+    "id": 17,
+    "name": "Dr. Vaibhav Shah",
+    "age": 25,
+    "location": "Bardoli, Surat, Gujarat",
+    "occupation": "Medical Officer",
+    "about": "Medical Officer at Shree Sardar Smarak Hospital with an M.B.B.S degree. Aspires to start his own clinic.",
+    "image": "/BioData_Photos/Vaibhav_Shah.png",
+    "details": "Vaibhav is a doctor based in Bardoli. He completed his medical studies at GMERS, Valsad. He belongs to the Shwetambar Jain community."
+  }
 ]
