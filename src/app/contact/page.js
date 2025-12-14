@@ -243,7 +243,7 @@ export default function Contact() {
 
                                 <Stack direction="row" alignItems="center" spacing={2}>
                                     <EmailIcon sx={{ color: "#A93C55" }} />
-                                    <Typography>rishtaserch@gmail.com</Typography>
+                                    <Typography>rishtaserachmatrimony@gmail.com</Typography>
                                 </Stack>
 
                                 <Stack direction="row" alignItems="center" spacing={2}>
@@ -292,7 +292,7 @@ export default function Contact() {
                                 style={{ border: 0 }}
                                 loading="lazy"
                                 allowFullScreen
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3671.574864589166!2d72.5628672110027!3d23.03937691561365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e848adaf06f61%3A0xc0742f3c45943a73!2sOmniMD!5e0!3m2!1sen!2sin!4v1765025672343!5m2!1sen!2sin"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d716.1713418362707!2d72.56535926360449!3d23.03915897525512!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e848ad07d8117%3A0x72583c8ee059ed91!2sAakruti%20Complex%2C%20Chimanlal%20Girdharlal%20Rd%2C%20Navarangpura%20Gam%2C%20Navrangpura%2C%20Ahmedabad%2C%20Gujarat%20380009!5e0!3m2!1sen!2sin!4v1765739344975!5m2!1sen!2sin"
                             ></iframe>
                         </Paper>
                     </Stack>

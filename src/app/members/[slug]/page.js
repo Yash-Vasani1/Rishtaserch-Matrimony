@@ -130,7 +130,7 @@ export default function PersonDetail() {
             >
                 <Grid container spacing={4}>
                     {/* LEFT: PROFILE PHOTO */}
-                    <Grid size={{xs:12, md:4}} data-aos="fade-right">
+                    <Grid size={{ xs: 12, md: 4 }} data-aos="fade-right">
                         <Avatar
                             src={person.image}
                             alt={person.name}
@@ -147,7 +147,7 @@ export default function PersonDetail() {
                     </Grid>
 
                     {/* RIGHT: DETAILS */}
-                    <Grid size={{xs:12, md:8}} data-aos="fade-left">
+                    <Grid size={{ xs: 12, md: 8 }} data-aos="fade-left">
                         <Typography
                             variant="h4"
                             sx={{
@@ -165,12 +165,16 @@ export default function PersonDetail() {
 
                         <Divider sx={{ mb: 3 }} />
 
-                        <Typography variant="h5" sx={{ fontFamily: "Playfair Display", mb: 1 }}>
-                            About Me
-                        </Typography>
-                        <Typography variant="body1" sx={{ lineHeight: "1.8" }}>
-                            {person.about}
-                        </Typography>
+                        {person.about &&
+                            <>
+                                <Typography variant="h5" sx={{ fontFamily: "Playfair Display", mb: 1 }}>
+                                    About Me
+                                </Typography>
+                                <Typography variant="body1" sx={{ lineHeight: "1.8" }}>
+                                    {person.about}
+                                </Typography>
+                            </>
+                        }
 
                         <Divider sx={{ my: 3 }} />
 

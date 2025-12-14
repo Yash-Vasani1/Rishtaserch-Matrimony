@@ -1,102 +1,172 @@
 [
   {
     "id": 1,
-    "name": "Aarav Patel",
-    "age": 29,
-    "location": "Ahmedabad, Gujarat",
-    "occupation": "Software Engineer",
-    "about": "Friendly, family-oriented, loves travel and cooking.",
-    "image": "https://i.pravatar.cc/400?img=12",
-    "details": "Aarav is a software engineer with 6 years experience. He loves trekking and photography."
+    "name": "Deep Amin",
+    "age": 30,
+    "location": "Melbourne, Australia",
+    "occupation": "Civil Development Engineer and Manager at Coles Supermarket",
+    "about": "Well-educated and responsible individual, family-oriented, and currently settled in Melbourne, Australia.",
+    "image": "/BioData_Photos/Deep_Amin.png",
+    "details": "Deep Amin is a Civil Development Engineer based in Melbourne, Australia. He holds a Master’s degree in Civil Engineering and has completed a Professional Year from Monash University. He currently works as a Civil Development Engineer with Williams & Co Pty and also serves as a Manager at Coles Supermarket."
   },
   {
     "id": 2,
-    "name": "Saanvi Shah",
+    "name": "Avani Vyas",
     "age": 26,
-    "location": "Surat, Gujarat",
-    "occupation": "Graphic Designer",
-    "about": "Creative, compassionate, enjoys painting and yoga.",
-    "image": "https://i.pravatar.cc/400?img=47",
-    "details": "Saanvi is a creative designer who enjoys storytelling and yoga."
+    "location": "Vadodara, India",
+    "occupation": "Computer Engineering Graduate with Cloud Data Management background",
+    "about": "Calm, well-educated, family-oriented, and career-focused.",
+    "image": "/BioData_Photos/Avani_Vyas.png",
+    "details": "Computer Engineering graduate with postgraduate studies in Cloud Data Management, currently on work permit and focused on professional growth."
   },
   {
     "id": 3,
-    "name": "Rohan Mehta",
+    "name": "Bhavik Shah",
     "age": 31,
-    "location": "Vadodara, Gujarat",
-    "occupation": "Entrepreneur",
-    "about": "Ambitious, fitness enthusiast, enjoys reading.",
-    "image": "https://i.pravatar.cc/400?img=5",
-    "details": "Rohan runs a startup. Family values matter to him greatly."
+    "location": "San Francisco, USA",
+    "occupation": "Architectural Designer and Founder of Archipreneur Architecture & Interiors",
+    "about": "Professionally qualified architect with strong design expertise and family business background.",
+    "image": "/BioData_Photos/Bhavik_Shah.png",
+    "details": "Bhavik Shah is an Architectural Designer with a Bachelor of Architecture from the University of Mumbai and a Master of Architecture from the USA. He works as a Design Trainee II with the Bureau of Architecture, San Francisco Public Works, and is also the Founder and Principal Architect of Archipreneur Architecture & Interiors."
   },
   {
     "id": 4,
-    "name": "Meera Joshi",
+    "name": "Preet Modi",
     "age": 27,
-    "location": "Mumbai, Maharashtra",
-    "occupation": "Doctor",
-    "about": "Caring, calm, loves helping people.",
-    "image": "https://i.pravatar.cc/400?img=32",
-    "details": "Meera is a pediatric doctor who enjoys meditation and classical music."
+    "location": "Milwaukee, Wisconsin, USA",
+    "occupation": "Global Motor Lead Engineer at Milwaukee Tool",
+    "about": "Career-driven and family-oriented individual who enjoys travel, photography, long drives, camping, and sports.",
+    "image": "/BioData_Photos/Preet_Modi.png",
+    "details": "Preet Modi is a Mechanical Engineer with a Master’s degree from the University of Wisconsin–Milwaukee and a Bachelor’s degree from Gujarat Technological University. He currently works as a Global Motor Lead Engineer at Milwaukee Tool in the USA."
   },
   {
     "id": 5,
-    "name": "Dev Singhania",
-    "age": 30,
-    "location": "Pune, Maharashtra",
-    "occupation": "Architect",
-    "about": "Creative thinker, loves nature and art.",
-    "image": "https://i.pravatar.cc/400?img=22",
-    "details": "Dev designs eco-friendly buildings and loves long bike trips."
+    "name": "Devarshi Pandya",
+    "age": 28,
+    "location": "Toronto, Canada",
+    "occupation": "Engineering Team Lead at Thomson Reuters",
+    "about": "Career-focused professional with strong technical background and balanced interests in music, fitness, and creative writing.",
+    "image": "/BioData_Photos/Devarshi_Pandya.png",
+    "details": "Devarshi Pandya is an Engineering Team Lead at Thomson Reuters in Toronto. He holds a B.Tech in Information Technology from Charotar University of Science & Technology and a Master of Applied Computer Science from Dalhousie University, Canada."
   },
   {
     "id": 6,
-    "name": "Isha Kapoor",
-    "age": 25,
-    "location": "Delhi",
-    "occupation": "Teacher",
-    "about": "Simple, traditional and kind-hearted.",
-    "image": "https://i.pravatar.cc/400?img=56",
-    "details": "Isha teaches English literature and enjoys writing poetry."
+    "name": "Akshar Patel",
+    "age": 30,
+    "location": "Houston, Texas, USA",
+    "occupation": "Data Analyst",
+    "about": "Well-educated and career-focused individual, currently settled in Texas with strong family values.",
+    "image": "/BioData_Photos/Akshar_Patel.png",
+    "details": "Akshar Patel holds a Bachelor of Science in Computer Information Systems from the University of Houston, Texas, and is currently working as a Data Analyst in the USA."
   },
   {
     "id": 7,
-    "name": "Kunal Desai",
-    "age": 33,
-    "location": "Rajkot, Gujarat",
-    "occupation": "Businessman",
-    "about": "Optimistic, practical, loves traveling.",
-    "image": "https://i.pravatar.cc/400?img=3",
-    "details": "Kunal runs a family textile business and loves exploring cultures."
+    "name": "Hetvi Shah",
+    "age": 23,
+    "location": "Bardoli, Surat, Gujarat, India",
+    "occupation": "Real Estate Sales Executive at Union Realty",
+    "about": "Well-educated and career-oriented individual with strong family values, currently based in Bardoli, Surat.",
+    "image": "/BioData_Photos/Hetvi_Shah.png",
+    "details": "Hetvi Shah holds a Master of Business Administration and is currently working as a Real Estate Sales Executive with Union Realty in Bardoli and Surat."
   },
   {
     "id": 8,
-    "name": "Priya Nair",
-    "age": 28,
-    "location": "Kochi, Kerala",
-    "occupation": "Software Developer",
-    "about": "Friendly, spiritual, family-loving.",
-    "image": "https://i.pravatar.cc/400?img=39",
-    "details": "Priya works in AI development and enjoys classical dance."
+    "name": "Meet Tushar Suthar",
+    "age": 29,
+    "location": "Bayonne, New Jersey, USA",
+    "occupation": "Team Lead at BrownLoop",
+    "about": "Career-focused professional with a background in engineering technology, currently working in the USA and valuing a balanced, disciplined lifestyle.",
+    "image": "/BioData_Photos/Meet_Tushar_Suthar.png",
+    "details": "Meet Tushar Suthar holds an MS in Engineering Technology and currently works as a Team Lead at BrownLoop, with his work location based at WTC, New York, USA."
   },
   {
     "id": 9,
-    "name": "Ravi Sharma",
-    "age": 34,
-    "location": "Jaipur, Rajasthan",
-    "occupation": "Civil Engineer",
-    "about": "Hardworking, grounded, loves heritage sites.",
-    "image": "https://i.pravatar.cc/400?img=8",
-    "details": "Ravi is a project engineer who enjoys history and photography."
+    "name": "Neer Maheshkumar Raval",
+    "age": 27,
+    "location": "Braunschweig, Germany",
+    "occupation": "CFD & Thermal Simulation Engineer",
+    "about": "Male, Hindu, Brahmin, working as a CFD & Thermal Simulation Engineer in Germany. Holds an M.Sc. in Aerospace Engineering.",
+    "image": "/BioData_Photos/Neer_Maheshkumar_Raval.png",
+    "details": "Neer Maheshkumar Raval is a CFD & Thermal Simulation Engineer currently residing in Braunschweig, Germany. He holds an M.Sc. in Aerospace Engineering from TU Braunschweig and a B.Sc. in Engineering Sciences from TU Berlin. His Rashi is Vrischika (Scorpio)."
   },
   {
     "id": 10,
-    "name": "Ankita Verma",
+    "name": "Parshwa Dipang Brahmbhatt",
     "age": 29,
-    "location": "Lucknow, UP",
-    "occupation": "Fashion Designer",
-    "about": "Elegant, artistic, passionate about culture.",
-    "image": "https://i.pravatar.cc/400?img=45",
-    "details": "Ankita owns a boutique and designs bridal wear."
-  }
+    "location": "Harrisburg, PA (USA)",
+    "occupation": "Own Business with partnership",
+    "about": "Hindu, owns a business in the USA with a work permit. Education includes B.D.S. and an MS in Data Analytics.",
+    "image": "/BioData_Photos/Parshwa_Dipang_Brahmbhatt.png",
+    "details": "Parshwa Dipang Brahmbhatt is currently running his own business with a partnership in Harrisburg, PA (USA) with a work permit. His father, Dipang Brahmbhatt, is a Retd. Gov. teacher, and his mother, Jyotika Brahmbhatt, is a Teacher in Ahmedabad International School. He has no siblings."
+  },
+  {
+    "id": 11,
+    "name": "Ruchi Pinalbhai Rajpura",
+    "age": "34",
+    "location": "Edmonton, AB, Canada (Citizen)",
+    "occupation": "Corporate Professional - Project Management",
+    "about": "Divorced (Separated in 10 days), Canadian Citizen, working in Project Management. Holds a Master's in Electrical Engineering.",
+    "image": "/BioData_Photos/Ruchi_Pinalbhai_Rajpura.png",
+    "details": "Ruchi Pinalbhai Rajpura is a Corporate Professional in Project Management who is a Citizen in Canada. She was born in Ahmedabad, Gujarat, India and is 160 cm in height. Her father's name is Pinal Bhudharbhai Rajpura."
+  },
+  {
+  "id": 12,
+  "name": "Rutvik Sanjaykumar Patel",
+  "age": 28,
+  "location": "Atlanta, Georgia, USA",
+  "occupation": "Sr. Software Engineer",
+  "about": "Sr. Software Engineer at JPMorgan Chase, Green Card holder living in Atlanta with a Master's in Information Systems.",
+  "image": "/BioData_Photos/Rutvik_Patel.png",
+  "details": "Rutvik holds a Master's from NJIT and works as a Senior Software Engineer. He enjoys hiking and coding. His family is based in Ahmedabad."
+},
+{
+  "id": 13,
+  "name": "Rutwa Shah",
+  "age": 26,
+  "location": "Rajkot, Gujarat, India",
+  "occupation": "Business Owner (Marketing Agency)",
+  "about": "Entrepreneur in Rajkot running a Social Media Marketing agency. Holds a Bachelor of Business from QUT, Australia.",
+  "image": "/BioData_Photos/Rutwa_Shah.png",
+  "details": "Rutwa runs 'The Happy Door Agency'. Her family owns a prominent women's wear retail business in Rajkot. She is a Vaishnav Vaniya."
+},
+{
+  "id": 14,
+  "name": "Smit Patel",
+  "age": 27,
+  "location": "Toronto, Canada",
+  "occupation": "Dispute Analyst",
+  "about": "Canada PR holder working at CIBC Bank. Holds an MBA in Finance from Vancouver Island University.",
+  "image": "/BioData_Photos/Smit_Patel.png",
+  "details": "Smit is based in Toronto and has a background in Accounting and Finance. His family is originally from Mehsana and Gandhinagar, Gujarat."
+},
+{
+  "id": 15,
+  "name": "Jay Shah",
+  "age": 28,
+  "location": "Morrisville, North Carolina, USA",
+  "occupation": "Software Engineer",
+  "about": "US Citizen working as a Software Engineer at TCS. Holds a Bachelor's in Computer Science and is pursuing a Master's.",
+  "image": "/BioData_Photos/Jay_Shah.png",
+  "details": "Jay is a US Citizen living in North Carolina. He belongs to the Vaishnav Vanik caste and is originally from Bharuch, Gujarat."
+},
+{
+  "id": 16,
+  "name": "Naitik Maniar",
+  "age": 31,
+  "location": "Irvine, California, USA",
+  "occupation": "Sr. Technology Leader",
+  "about": "Sr. Technology Leader on an H1B visa in California. Holds a B.Tech in Electronics and Communication.",
+  "image": "/BioData_Photos/Naitik_Maniar.png",
+  "details": "Naitik works for a US-based Indian MNC in Irvine. He is a Vaishnav Vaniya originally from Jamnagar, Gujarat."
+},
+{
+  "id": 17,
+  "name": "Dr. Vaibhav Shah",
+  "age": 25,
+  "location": "Bardoli, Surat, Gujarat",
+  "occupation": "Medical Officer",
+  "about": "Medical Officer at Shree Sardar Smarak Hospital with an M.B.B.S degree. Aspires to start his own clinic.",
+  "image": "/BioData_Photos/Vaibhav_Shah.png",
+  "details": "Vaibhav is a doctor based in Bardoli. He completed his medical studies at GMERS, Valsad. He belongs to the Shwetambar Jain community."
+}
 ]
