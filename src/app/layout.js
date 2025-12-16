@@ -5,10 +5,12 @@ import "./globals.css";
 import { ThemeProvider } from "@mui/material/styles";
 import Footer from "@/components/Footer";
 import theme from "@/theme/theme";
+import SEO from "@/components/SEO";
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <SEO />
       <body>
         <ThemeProvider theme={theme}>
           <Header />

@@ -168,5 +168,15 @@
     "about": "Medical Officer at Shree Sardar Smarak Hospital with an M.B.B.S degree. Aspires to start his own clinic.",
     "image": "/BioData_Photos/Vaibhav_Shah.png",
     "details": "Vaibhav is a doctor based in Bardoli. He completed his medical studies at GMERS, Valsad. He belongs to the Shwetambar Jain community."
-  }
+  }, 
+  {
+  "id": 18,
+  "name": "Brinda Trivedi",
+  "age": 32,
+  "location": "Rajkot, Gujarat",
+  "occupation": "Clinical Cosmetologist and Dentist",
+  "about": "Independent and free-spirited individual who enjoys traveling, learning new skills, and enriching life through experiences.",
+  "image": "/BioData_Photos/Brinda_Trivedi.png",
+  "details": "Brinda is a Bachelor of Dental Surgery with post-graduate diplomas in Medical Trichology and Aesthetic Cosmetology. She has professional experience working as a dentist and clinical cosmetologist in Ahmedabad and Rajkot. In her spare time, she enjoys working out and watching documentaries."
+}
 ]
