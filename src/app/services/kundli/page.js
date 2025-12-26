@@ -20,8 +20,6 @@ import AutoGraphIcon from "@mui/icons-material/AutoGraph";
 import GavelIcon from "@mui/icons-material/Gavel";
 import EmojiPeopleIcon from "@mui/icons-material/EmojiPeople";
 import HailIcon from "@mui/icons-material/Hail";
-import InfoIcon from "@mui/icons-material/Info";
-import SEO from "@/components/SEO";
 
 export default function KundliMatching() {
   useEffect(() => {
@@ -44,13 +42,6 @@ export default function KundliMatching() {
 
   return (
     <>
-      <SEO
-        title="Kundli Matching Services | Rishtaserch Matrimony"
-        description="Harmonize your matches with our expert Kundli matching services. Ensure compatibility based on astrology and traditional matrimonial practices."
-        keywords="kundli matching, astrology, marriage compatibility, rishtaserch, rishta search, rishtaserch matrimony"
-        url="https://www.rishtaserchmatrimony.com/services/kundli"
-      />
-
       <Box sx={{ py: 6, px: { xs: 2, md: 6 }, maxWidth: "1200px", mx: "auto" }}>
         {/* Hero */}
         <Box data-aos="fade-up" sx={{ textAlign: "center", py: 8, position: "relative" }}>

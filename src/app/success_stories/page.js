@@ -5,7 +5,6 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 import SuccessStoriesData from "@/data/SuccessStoriesData"
-import SEO from "@/components/SEO";
 
 const stories = SuccessStoriesData;
 
@@ -16,14 +15,6 @@ export default function SuccessStories() {
 
   return (
     <>
-      <SEO
-        title="Success Stories - Happy Marriages | Rishtaserch Matrimony"
-        description="Read inspiring success stories of couples who found their perfect match through Rishtaserch Matrimony. Witness real love and long-lasting relationships."
-        keywords="success stories, happy marriages, rishtaserch, rishta search, rishtaserch matrimony, couples, matrimonial success, love stories"
-        url="https://www.rishtaserchmatrimony.com/success_stories"
-        // image="/images/success-stories-banner.jpg"
-      />
-
       <Box sx={{ py: 6, px: { xs: 2, md: 6 }, maxWidth: "1200px", mx: "auto" }}>
 
         {/* 🌟 HERO SECTION */}

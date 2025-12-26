@@ -5,7 +5,6 @@ import {
   Public, BusinessCenter, WorkspacePremium, FlightTakeoff,
   School, LocalHospital, Gavel, Engineering
 } from "@mui/icons-material";
-import SEO from "./SEO";
 
 const items = [
   { icon: <WorkspacePremium sx={{ fontSize: 40 }} />, label: "High Class / HNI" },
@@ -21,15 +20,6 @@ const items = [
 export default function EliteClients() {
   return (
     <>
-      {/* SEO */}
-      <SEO
-        title="Elite / Premium Members | Rishtaserch Matrimony"
-        description="Discover the elite members of Rishtaserch Matrimony — HNI, business families, NRIs, professionals, and highly qualified individuals seeking meaningful connections."
-        keywords="rishtaserch, rishta search, elite members, premium members, HNI, business families, NRI, matrimony, matchmaking, life partner"
-        url="https://www.rishtaserchmatrimony.com/elite-members"
-        // image="/images/elite-members-banner.jpg"
-      />
-
       <Box
         sx={{
           textAlign: "center",

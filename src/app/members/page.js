@@ -6,7 +6,6 @@ import { Box, Grid, Typography } from "@mui/material";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
-import SEO from "@/components/SEO";
 
 export default function Persons() {
 
@@ -16,12 +15,9 @@ export default function Persons() {
 
   return (
     <>
-      <SEO
-        title="Verified Matrimony Members | Rishtaserch"
-        description="Browse verified matrimonial profiles of singles seeking meaningful relationships. Connect with your ideal life partner through Rishtaserch Matrimony."
-        keywords="verified matrimonial members, rishtaserch, rishta search, rishtaserch matrimony, marriage profiles, find partner, matrimonial site India"
-        url="https://www.rishtaserchmatrimony.com/members"
-      />
+      <Typography component="h1" sx={{ position: "absolute", left: "-9999px" }}>
+        Browse Verified Matrimony Profiles – Brides & Grooms
+      </Typography>
 
       <Box
         sx={{

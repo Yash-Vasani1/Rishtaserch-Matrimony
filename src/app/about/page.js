@@ -11,7 +11,6 @@ import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import EliteClients from "@/components/EliteClients";
-import SEO from "@/components/SEO";
 
 
 export default function About() {
@@ -22,13 +21,9 @@ export default function About() {
 
     return (
         <>
-            <SEO
-                title="About Rishtaserch Matrimony - Trusted Matrimonial Services"
-                description="Learn about Rishtaserch Matrimony, our legacy of connecting families, personalized matchmaking approach, and commitment to long-term happiness."
-                keywords="about rishtaserch, rishtaserch matrimony, trusted matrimonial service, marriage site India, personalized matchmaking, family first approach"
-                url="https://www.rishtaserchmatrimony.com/about"
-                // image="/images/about-banner.jpg"
-            />
+            <Typography component="h1" sx={{ position: "absolute", left: "-9999px" }}>
+                About Rishtaserch Matrimony – Trusted Matchmaking Service
+            </Typography>
 
             <Box sx={{ py: 6, px: { xs: 2, md: 6 }, maxWidth: "1200px", mx: "auto" }}>
 

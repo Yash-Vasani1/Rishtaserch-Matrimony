@@ -22,7 +22,6 @@ import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import FacebookIcon from "@mui/icons-material/Facebook";
-import SEO from "@/components/SEO";
 
 export default function Contact() {
     useEffect(() => {
@@ -63,13 +62,9 @@ export default function Contact() {
 
     return (
         <>
-            <SEO
-                title="Contact Rishtaserch Matrimony - Get in Touch"
-                description="Reach out to Rishtaserch Matrimony for personalized matchmaking, inquiries, or support. Our team is here to help you find your perfect match."
-                keywords="contact rishtaserch, rishtaserch matrimony, matrimonial support, matchmaking help, rishta search, marriage inquiries"
-                url="https://www.rishtaserchmatrimony.com/contact"
-                // image="/images/contact-banner.jpg"
-            />
+            <Typography component="h1" sx={{ position: "absolute", left: "-9999px" }}>
+                Contact Rishtaserch Matrimony – Customer Support & Assistance
+            </Typography>
 
             <Box
                 sx={{

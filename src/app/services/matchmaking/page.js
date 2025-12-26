@@ -26,7 +26,6 @@ import CalendarTodayIcon from "@mui/icons-material/CalendarToday";
 import StarIcon from "@mui/icons-material/Star";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import ChatIcon from "@mui/icons-material/Chat";
-import SEO from "@/components/SEO";
 
 export default function PersonalizedMatchmaking() {
   useEffect(() => {
@@ -54,13 +53,6 @@ export default function PersonalizedMatchmaking() {
 
   return (
     <>
-      <SEO
-        title="Personalized Matchmaking Services | Rishtaserch Matrimony"
-        description="Experience handpicked matchmaking services tailored for your lifestyle, values, and family preferences."
-        keywords="personalized matchmaking, rishtaserch, rishta search, matrimony service"
-        image="/Hero_img.png"
-        url="https://www.rishtaserchmatrimony.com/services/matchmaking"
-      />
       <Box sx={{ py: 6, px: { xs: 2, md: 6 }, maxWidth: "1200px", mx: "auto" }}>
         {/* Hero */}
         <Box data-aos="fade-up" sx={{ textAlign: "center", py: 8, position: "relative" }}>

@@ -8,7 +8,6 @@ import people from "@/data/people.json"; // use first 6 members
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import SuccessStoriesData from "@/data/SuccessStoriesData"
-import SEO from "@/components/SEO";
 
 
 
@@ -24,13 +23,9 @@ export default function Home() {
 
   return (
     <>
-      <SEO
-        title="Rishtaserch Matrimony - Find Your Perfect Life Partner"
-        description="Rishtaserch Matrimony helps you find your ideal match with verified profiles, personalized matchmaking, and family-first approach. Start your journey to lifelong happiness."
-        keywords="rishtaserch, rishta search, rishtaserch matrimony, matrimonial, marriage, matchmaking, life partner, verified profiles, matchmaking India"
-        url="https://www.rishtaserchmatrimony.com/"
-        image="/Hero_img.png"
-      />
+      <Typography component="h1" sx={{ position: "absolute", left: "-9999px" }}>
+        Rishtaserch Matrimony – Trusted Rishta Search Platform
+      </Typography>
 
       <Box sx={{ bgcolor: "#F7F9FC" }}>
         {/* ================= HERO SECTION ================= */}

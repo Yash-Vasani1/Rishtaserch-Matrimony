@@ -14,7 +14,6 @@ import {
   ListItemText,
   Collapse,
   Paper,
-  Typography,
   ListItemButton,
 } from "@mui/material";
 
@@ -23,7 +22,6 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import CloseIcon from "@mui/icons-material/Close";
 import { useScrollTrigger } from "@mui/material";
 import { usePathname } from "next/navigation";
-import SEO from "./SEO";
 
 const navItems = [
   {
@@ -59,14 +57,6 @@ export default function Header() {
 
   return (
     <>
-      {/* 🌟 SEO META */}
-      <SEO
-        title="Rishtaserch Matrimony - Trusted Matrimonial Site"
-        description="Rishtaserch Matrimony helps you find trusted life partners with personalized matchmaking, verified profiles, and success stories."
-        keywords="rishtaserch, rishta search, matrimony, life partner, matchmaking, verified profiles, NRI matrimony"
-        url="https://www.rishtaserchmatrimony.com/"
-        image="/logo/logo_png.png"
-      />
       {/* HEADER */}
       <AppBar
         position="fixed"

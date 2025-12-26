@@ -21,7 +21,6 @@ import VerifiedUserIcon from "@mui/icons-material/VerifiedUser";
 import BadgeIcon from "@mui/icons-material/Badge";
 import BusinessCenterIcon from "@mui/icons-material/BusinessCenter";
 import GppGoodIcon from "@mui/icons-material/GppGood";
-import SEO from "@/components/SEO";
 
 export default function BackgroundVerification() {
   useEffect(() => {
@@ -42,14 +41,6 @@ export default function BackgroundVerification() {
 
   return (
     <>
-      <SEO
-        title="Background Verification Services | Rishtaserch Matrimony"
-        description="Ensure trustworthy connections with our comprehensive background verification for matrimonial profiles. Safe, verified, and reliable matches."
-        keywords="background verification, safe matches, verified profiles, rishtaserch, rishta search, rishtaserch matrimony"
-        url="https://www.rishtaserchmatrimony.com/services/background"
-        image="/Hero_img.png"
-      />
-
       <Box sx={{ py: 6, px: { xs: 2, md: 6 }, maxWidth: "1200px", mx: "auto" }}>
         {/* Hero */}
         <Box data-aos="fade-up" sx={{ textAlign: "center", py: 8, position: "relative" }}>
