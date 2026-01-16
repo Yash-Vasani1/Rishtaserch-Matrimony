@@ -65,7 +65,7 @@ export default function SEO({
             "sameAs": [
               "https://www.instagram.com",
               "https://www.facebook.com",
-              "https://wa.me/918849367258"
+              "https://wa.me/917862990641"
             ]
           }),
         }}

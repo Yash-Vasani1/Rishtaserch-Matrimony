@@ -36,7 +36,7 @@ export default function BackgroundVerification() {
 
   const handleVerify = () => {
     const message = `Hello, I want to initiate Background Verification for a profile.`;
-    window.open(`https://wa.me/918849367258?text=${encodeURIComponent(message)}`, "_blank");
+    window.open(`https://wa.me/917862990641?text=${encodeURIComponent(message)}`, "_blank");
   };
 
   return (

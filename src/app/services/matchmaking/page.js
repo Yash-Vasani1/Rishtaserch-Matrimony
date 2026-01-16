@@ -47,7 +47,7 @@ export default function PersonalizedMatchmaking() {
 
   const handleContact = (sample) => {
     const message = `Hello, I'm interested in Personalized Matchmaking and would like to know more about ${sample?.name ?? "your services"}.`;
-    const whatsappNumber = "918849367258";
+    const whatsappNumber = "917862990641";
     window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`, "_blank");
   };
 

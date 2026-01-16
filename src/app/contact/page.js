@@ -42,7 +42,7 @@ export default function Contact() {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        const whatsappNumber = "918849367258"; // your WhatsApp number without +
+        const whatsappNumber = "917862990641"; // your WhatsApp number without +
 
         const whatsappMessage =
             `Hello, I want to contact you.\n\n` +
@@ -243,7 +243,7 @@ export default function Contact() {
                                 <Stack spacing={2}>
                                     <Stack direction="row" alignItems="center" spacing={2}>
                                         <PhoneIcon sx={{ color: "#A93C55" }} />
-                                        <Typography>+91 8849367258</Typography>
+                                        <Typography>+91 7862990641</Typography>
                                     </Stack>
 
                                     <Stack direction="row" alignItems="center" spacing={2}>
@@ -263,7 +263,7 @@ export default function Contact() {
                                 {/* Social Icons */}
                                 <Stack direction="row" spacing={2} sx={{ mt: 3 }}>
                                     <IconButton
-                                        onClick={() => window.open("https://wa.me/918849367258", "_blank")}
+                                        onClick={() => window.open("https://wa.me/917862990641", "_blank")}
                                     >
                                         <WhatsAppIcon sx={{ color: "#25D366" }} />
                                     </IconButton>

@@ -135,7 +135,7 @@ export default function Footer() {
           </IconButton>
           <IconButton
             component="a"
-            href="https://wa.me/918849367258"
+            href="https://wa.me/917862990641"
             target="_blank"
             sx={{
               color: '#25D366',

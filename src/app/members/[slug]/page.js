@@ -27,7 +27,7 @@ export default function PersonDetail() {
 
         Please guide me with the next steps.`;
 
-        const whatsappNumber = "918849367258"; // <-- company WhatsApp number (without +)
+        const whatsappNumber = "917862990641"; // <-- company WhatsApp number (without +)
         const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 
         window.open(url, "_blank");

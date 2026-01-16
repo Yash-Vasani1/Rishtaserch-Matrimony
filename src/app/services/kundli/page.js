@@ -37,7 +37,7 @@ export default function KundliMatching() {
 
   const handleOrder = () => {
     const message = `Hello, I want a Kundli Matching report and consultation.`;
-    window.open(`https://wa.me/918849367258?text=${encodeURIComponent(message)}`, "_blank");
+    window.open(`https://wa.me/917862990641?text=${encodeURIComponent(message)}`, "_blank");
   };
 
   return (
