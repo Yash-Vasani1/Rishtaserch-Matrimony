@@ -1,41 +1,18 @@
-export const metadata = {
-  title: "Browse Matrimony Profiles – Verified Members | Rishtaserch Matrimony",
+import { buildMetadata } from "@/lib/seo";
+
+export const metadata = buildMetadata({
+  title: "Browse Verified Matrimony Profiles",
   description:
-    "Browse verified matrimony profiles of brides and grooms on Rishtaserch Matrimony. Find trusted, family-oriented members and your ideal life partner.",
+    "Browse verified bride and groom profiles on Rishtaserch Matrimony and discover meaningful, family-oriented marriage matches.",
+  path: "/members",
   keywords: [
     "matrimony profiles",
-    "verified matrimony members",
-    "bride groom profiles",
-    "indian matrimony members",
-    "rishtaserch matrimony members",
+    "verified bride and groom profiles",
+    "Rishtaserch members",
     "find life partner online",
   ],
-  openGraph: {
-    title: "Verified Matrimony Profiles | Rishtaserch Matrimony",
-    description:
-      "Explore verified bride and groom profiles on Rishtaserch Matrimony and find meaningful matches.",
-    url: "https://www.rishtaserchmatrimony.com/members",
-    siteName: "Rishtaserch Matrimony",
-    images: [
-      {
-        url: "logo/logo_png.png",
-        width: 512,
-        height: 512,
-        alt: "Rishtaserch Matrimony Logo",
-      },
-    ],
-    type: "website",
-  },
-};
+});
 
-export default function RootLayout({ children }) {
-  return (
-    <html lang="en">
-      <body>
-          <main style={{ minHeight: "70vh" }}>
-            {children}
-          </main>
-      </body>
-    </html>
-  );
+export default function MembersLayout({ children }) {
+  return children;
 }

@@ -1,44 +1,18 @@
-// app/contact/layout.js
+import { buildMetadata } from "@/lib/seo";
 
-export const metadata = {
-  title: "Contact Us – Rishtaserch Matrimony",
+export const metadata = buildMetadata({
+  title: "Contact Us",
   description:
-    "Get in touch with Rishtaserch Matrimony for profile support, membership inquiries, or assistance. Contact us via phone, email, or WhatsApp.",
+    "Contact Rishtaserch Matrimony for membership help, profile support, matchmaking assistance, or general matrimony inquiries by phone, email, or WhatsApp.",
+  path: "/contact",
   keywords: [
-    "rishtaserch matrimony contact",
-    "contact rishtaserch matrimony",
-    "rishtaserch support",
-    "rishtaserch matrimony phone number",
-    "matrimony customer support",
-    "matchmaking contact page",
+    "Rishtaserch Matrimony contact",
+    "matrimony support",
+    "matchmaking contact",
+    "Rishtaserch phone number",
   ],
-  openGraph: {
-    title: "Contact Rishtaserch Matrimony",
-    description:
-      "Need help with your profile or membership? Contact Rishtaserch Matrimony for trusted matchmaking support and assistance.",
-    url: "https://www.rishtaserchmatrimony.com/contact",
-    siteName: "Rishtaserch Matrimony",
-    images: [
-      {
-        url: "/logo.png",
-        width: 512,
-        height: 512,
-        alt: "Rishtaserch Matrimony Logo",
-      },
-    ],
-    type: "website",
-  },
-};
+});
 
-
-export default function RootLayout({ children }) {
-  return (
-    <html lang="en">
-      <body>
-          <main style={{ minHeight: "70vh" }}>
-            {children}
-          </main>
-      </body>
-    </html>
-  );
+export default function ContactLayout({ children }) {
+  return children;
 }

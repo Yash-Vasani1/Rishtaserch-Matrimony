@@ -8,7 +8,6 @@ import "aos/dist/aos.css";
 import { useEffect } from "react";
 
 export default function Persons() {
-
   useEffect(() => {
     AOS.init({ duration: 900, once: true });
   }, []);
@@ -16,7 +15,7 @@ export default function Persons() {
   return (
     <>
       <Typography component="h1" sx={{ position: "absolute", left: "-9999px" }}>
-        Browse Verified Matrimony Profiles – Brides & Grooms
+        Browse Verified Matrimony Profiles - Brides and Grooms
       </Typography>
 
       <Box
@@ -27,8 +26,6 @@ export default function Persons() {
           mx: "auto",
         }}
       >
-
-        {/* 🌟 Hero Section */}
         <Box
           sx={{
             textAlign: "center",
@@ -37,7 +34,6 @@ export default function Persons() {
           }}
           data-aos="fade-up"
         >
-          {/* Background Glow */}
           <Box
             sx={{
               position: "absolute",
@@ -53,7 +49,6 @@ export default function Persons() {
             }}
           />
 
-          {/* Page Title */}
           <Typography
             variant="h2"
             sx={{
@@ -68,7 +63,6 @@ export default function Persons() {
             Members & Profiles
           </Typography>
 
-          {/* Decorative Heart Line */}
           <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center", mb: 3 }}>
             <Box sx={{ width: "60px", height: "2px", background: "#C7A17A" }} />
             <Box
@@ -105,15 +99,10 @@ export default function Persons() {
           </Typography>
         </Box>
 
-        {/* List of Profiles */}
         <Grid container spacing={4} sx={{ mt: 3 }}>
-          {people.map((p, i) => (
-            <Grid
-              size={{ xs: 12, sm: 6, md: 4 }}
-              key={p.id}
-              data-aos="fade-up"
-            >
-              <ProfileCard person={p} />
+          {people.map((person) => (
+            <Grid size={{ xs: 12, sm: 6, md: 4 }} key={person.id} data-aos="fade-up">
+              <ProfileCard person={person} />
             </Grid>
           ))}
         </Grid>
