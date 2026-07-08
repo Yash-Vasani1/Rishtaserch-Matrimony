@@ -4,6 +4,7 @@ import { ThemeProvider } from "@mui/material/styles";
 import Footer from "@/components/Footer";
 import theme from "@/theme/theme";
 import { rootMetadata, structuredData } from "@/lib/seo";
+import { Analytics } from '@vercel/analytics/react';
 
 export const metadata = rootMetadata;
 
@@ -24,6 +25,7 @@ export default function RootLayout({ children }) {
           </main>
           <Footer />
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );
