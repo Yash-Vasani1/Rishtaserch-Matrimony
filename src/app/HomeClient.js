@@ -68,7 +68,7 @@ export default function HomeClient() {
                 lineHeight: 1.2,
               }}
             >
-              Find Someone Who Feels Like Home
+              Find Someone Who Feels Like Home123
             </Typography>
 
             <Typography
